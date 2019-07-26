@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GehirnJogging.Code;
+using GehirnJogging.Pages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,11 +19,33 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Gehirn
 {
-    /// <summary>
-    /// Stellt das anwendungsspezifische Verhalten bereit, um die Standardanwendungsklasse zu ergänzen.
-    /// </summary>
     sealed partial class App : Application
     {
+
+        public static readonly string FUNCTION_KEY = "?code=Yued8GW/qIM7elGa/XcrSi4saQd5IQGS3atWGJ7VKh1Sz23X/jGT6Q==";
+        //public static readonly string FUNCTION_KEY = "";
+        //public static readonly string FUNCTION_URI = "http://localhost:7071/api/";
+        public static readonly string FUNCTION_URI = "https://projekt-gehirn-jogging-functions.azurewebsites.net/api/";
+        public static readonly string FUNCTION_LOGIN = "Login";
+        public static readonly string FUNCTION_REGISTER = "Register";
+        public static readonly string FUNCTION_GET_HIGH_SCORES = "GetHighScores";
+        public static readonly string FUNCTION_UPDATE_HIGHSCORE = "UpdateHighScore";
+        public static readonly string FUNCTION_GET_IMAGES_FILES = "GetImageFiles";
+        public static readonly string FUNCTION_SET_IMAGES_FILES = "SetImageFiles";
+        public static readonly string FUNCTION_DEL_IMAGES_FILES = "DelImageFiles";
+        public static readonly string FUNCTION_SET_STANDARD_IMAGE_FILES = "GetStandardImages";
+
+        public static readonly ResourceDictionary ResourceDict = new ResourceDictionary
+        {
+            Source = new Uri("ms-appx:///Pages/ResourceDictionaries/ColorBrushes.xaml")
+        };
+
+        public static Page currentPage;
+        public static void Abmelden(string s)
+        {
+            Nutzer.Getinstance().Abmelden();
+            currentPage.Frame.Navigate(typeof(AnmeldeSeite), s);
+        }
         /// <summary>
         /// Initialisiert das Singletonanwendungsobjekt. Dies ist die erste Zeile von erstelltem Code
         /// und daher das logische Äquivalent von main() bzw. WinMain().
@@ -66,7 +90,7 @@ namespace Gehirn
                     // Wenn der Navigationsstapel nicht wiederhergestellt wird, zur ersten Seite navigieren
                     // und die neue Seite konfigurieren, indem die erforderlichen Informationen als Navigationsparameter
                     // übergeben werden
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(AnmeldeSeite), e.Arguments);
                 }
                 // Sicherstellen, dass das aktuelle Fenster aktiv ist
                 Window.Current.Activate();

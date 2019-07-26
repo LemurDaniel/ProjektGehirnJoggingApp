@@ -4,4 +4,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Gehirn">
 
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary  Source="Pages/ResourceDictionaries/MainButton.xaml"/>
+                <ResourceDictionary  Source="Pages/ResourceDictionaries/ToggleButton.xaml"/>
+                <ResourceDictionary  Source="Pages/ResourceDictionaries/TextBox.xaml"/>
+                <ResourceDictionary  Source="Pages/ResourceDictionaries/PasswortBox.xaml"/>
+                <ResourceDictionary  Source="Pages/ResourceDictionaries/IconButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="GehirnJogging.Pages.Controller.MemorizeController"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GehirnJogging.Pages.Controller"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="1080"
+    d:DesignWidth="1920">
+    
+    <StackPanel  HorizontalAlignment="Center" Margin="50,50,50,50">
+        <TextBlock FontSize="80" x:Name="Count" Text="2/2" Foreground="{StaticResource MainTextColor}" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Grid x:Name="SpielFeld"/>
+    </StackPanel>
+
+</UserControl>
