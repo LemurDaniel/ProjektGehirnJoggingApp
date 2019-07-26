@@ -1,4 +1,5 @@
-﻿using GehirnJogging.Code.Spiele;
+﻿using Gehirn;
+using GehirnJogging.Code.Spiele;
 using GehirnJogging.Pages.ResourceDictionaries;
 using System;
 using System.Collections.Generic;

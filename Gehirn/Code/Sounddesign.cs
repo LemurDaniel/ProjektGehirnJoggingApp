@@ -59,7 +59,7 @@ namespace GehirnJogging.Code
 
         public static Sound AMBIENT1 = new Sound("FreeSounds\\Ambient1.wav");
         public static Sound AMBIENT2 = new Sound("FreeSounds\\Ambient2.wav");
-        public static Sound AMBIENT3 = new Sound("FreeMusicArchive\\Lobo_Loco-Elysium.mp3");
+        public static Sound AMBIENT3 = new Sound("FreeSounds\\Ambient3.wav");
 
         public static Sound CURRENT_AMBIENT = null;
 
