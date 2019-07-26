@@ -1,0 +1,26 @@
+﻿<UserControl
+    x:Class="GehirnJogging.Pages.Controller.KopfrechnenController"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GehirnJogging.Pages.Controller"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="1080"
+    d:DesignWidth="1920">
+
+    <Grid>
+        <StackPanel  HorizontalAlignment="Center" Margin="50,50,50,50">
+            <TextBlock FontSize="80" x:Name="Count" Text="2/2" Foreground="{StaticResource MainTextColor}" VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="0,0,0,160"/>
+            <TextBlock HorizontalAlignment="Center" FontSize="80" x:Name="Term" Text="tttttttttttttttttt" Foreground="{StaticResource MainTextColor}"  />
+            <Border HorizontalAlignment="Center" CornerRadius="15" Margin="20,20,20,20" x:Name="EingabeContainer">
+                <TextBox FontSize="60" Width="400" Height="90" TextAlignment="Center" x:Name="Eingabe" Style="{StaticResource TextBoxStyle}" Text="Test"/>
+            </Border>
+            <Border HorizontalAlignment="Center" CornerRadius="15" Margin="20,20,20,20" Visibility="Collapsed" x:Name="WrongContainer"/>
+            <Border HorizontalAlignment="Center" CornerRadius="15" Margin="20,20,20,20" Visibility="Collapsed" x:Name="RightContainer"/>
+            <Border HorizontalAlignment="Center" CornerRadius="15" Margin="20,20,20,20">
+                <Button FontSize="40" x:Name="GO" Content="GO" Click="Go" Style="{StaticResource MainButtonStyle}"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

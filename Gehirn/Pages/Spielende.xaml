@@ -1,0 +1,91 @@
+﻿<Page
+    x:Class="GehirnJogging.Pages.Spielende"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GehirnJogging.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="AssetBilder/TiledBackground1.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Border CornerRadius="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,40,50,50">
+            <Button Style="{StaticResource IconButtonStyle}" Click="Click" PointerEntered="ButtonEntered" PointerExited="ButtonExit" x:Name="Back" Background="Transparent" BorderThickness="0" Tag="left-arrow">
+                <Button.Content>
+                    <Image Source="AssetBilder/left-arrow-mainBlue.png" Stretch="Uniform" />
+                </Button.Content>
+            </Button>
+        </Border>
+
+        <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1000" Background="{StaticResource MainLightBackground2}" Padding="10,20,10,20">
+            <ContentControl x:Name="Ccontrol">
+                <StackPanel>
+                    <Pivot PivotItemLoaded="PivotItemLoadedSmall">
+
+                        <PivotItem Padding="0,25,0,0">
+                            <PivotItem.Header>
+                                <TextBlock FontSize="40" VerticalAlignment="Bottom"  Foreground="{StaticResource MainButtonBlue}" Text="Neuer Highscore" Margin="50,0,50,5"/>
+                            </PivotItem.Header>
+
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                <StackPanel HorizontalAlignment="Left" x:Name="NewScoreLeft"      Margin="50,0,100,0"/>
+                                <StackPanel HorizontalAlignment="Right" x:Name="NewScoreRight"    Margin="100,0,50,0"/>
+                            </StackPanel>
+                        </PivotItem>
+
+                        <PivotItem Padding="0,25,0,0">
+                            <PivotItem.Header>
+                                <TextBlock FontSize="40"  VerticalAlignment="Bottom" Foreground="{StaticResource MainButtonBlue}" Text="Alter Highscore" Margin="50,0,50,5"/>
+                            </PivotItem.Header>
+
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                <StackPanel HorizontalAlignment="Left" x:Name="OldScoreLeft"      Margin="50,0,100,0"/>
+                                <StackPanel HorizontalAlignment="Right" x:Name="OldScoreRight"    Margin="100,0,50,0"/>
+                            </StackPanel>
+                        </PivotItem>
+                    </Pivot>
+
+                    <Border CornerRadius="15" HorizontalAlignment="Center"  Margin="10,150,10,10">
+                        <Button Style="{StaticResource MainButtonStyle}"  Click="Click" x:Name="Replay" Content="Nochmal Spielen" Visibility="Collapsed"/>
+                    </Border>
+
+                    <Border CornerRadius="15" HorizontalAlignment="Center" Margin="10,10,10,10">
+                        <Button Style="{StaticResource MainButtonStyle}" Click="Click" x:Name="BackToMenu" Content="Zurück zum Hauptmenue" />
+                    </Border>
+
+                </StackPanel>
+            </ContentControl>
+        </Border>
+
+        <Popup  IsOpen="False" Name="WorldRecordPopUp" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Border CornerRadius="25" Padding="50,50,50,50"  x:Name="PopUpBorder" Background="{StaticResource PopupBackground}" BorderThickness="{StaticResource PopupBoderThickness}" BorderBrush="{StaticResource PopupBorderColor}">
+                <StackPanel>
+                    <TextBlock Margin="0,20,0,20" TextAlignment="Center" Foreground="{StaticResource PopupText}"  FontSize="60" Text="Herzlichen Glückwunsch"/>
+                    <TextBlock Margin="0,20,0,20" TextAlignment="Center" Foreground="{StaticResource PopupText}"  FontSize="40" Text="Du hast einen Neuen Weltrekord aufgestellt" x:Name="WRecordT1"/>
+                    
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <StackPanel HorizontalAlignment="Left" Margin="0,20,0,20">
+                            <TextBlock TextAlignment="Left" Foreground="{StaticResource PopupText}"  FontSize="40" Text="Alter Rekord:" Margin="20,0,50,0" x:Name="RecordOldName"/>
+                            <TextBlock TextAlignment="Left" Foreground="{StaticResource PopupText}"  FontSize="40" Text="Neuer Rekord:" Margin="20,0,50,0" x:Name="RecordNewName"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right" Margin="0,20,0,20">
+                            <TextBlock TextAlignment="Right" Foreground="{StaticResource PopupText}"  FontSize="40" Text="Alter Rekords:" Margin="50,0,20,0" x:Name="RecordOld"/>
+                            <TextBlock TextAlignment="Right" Foreground="{StaticResource PopupText}"  FontSize="40" Text="Neuer Rekords:" Margin="50,0,20,0" x:Name="RecordNew"/>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <Border CornerRadius="15" HorizontalAlignment="Center" Margin="0,20,0,20">
+                        <Button Style="{StaticResource MainButtonStyle}" Click="Click" x:Name="PopUpClose" Content="!!! SUPER !!!" />
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Popup>
+
+         
+
+    </Grid>
+</Page>

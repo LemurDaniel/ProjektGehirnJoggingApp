@@ -122,6 +122,50 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AnmeldeSeite.xaml.cs">
+      <DependentUpon>AnmeldeSeite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controller\BuchstabenController.xaml.cs">
+      <DependentUpon>BuchstabenController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controller\ConcentrateController.xaml.cs">
+      <DependentUpon>ConcentrateController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controller\FarbeGleichWortController.xaml.cs">
+      <DependentUpon>FarbeGleichWortController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controller\KopfrechnenController.xaml.cs">
+      <DependentUpon>KopfrechnenController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controller\MemorizeController.xaml.cs">
+      <DependentUpon>MemorizeController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controller\SchiebepuzzleController.xaml.cs">
+      <DependentUpon>SchiebepuzzleController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controller\SpielController.cs" />
+    <Compile Include="Pages\Controller\WechselGeldController.xaml.cs">
+      <DependentUpon>WechselGeldController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controller\WechselGeldEingabe.xaml.cs">
+      <DependentUpon>WechselGeldEingabe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Credits.xaml.cs">
+      <DependentUpon>Credits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ResourceDictionaries\ColorButton.cs" />
+    <Compile Include="Pages\SchiebePuzzleOptions.xaml.cs">
+      <DependentUpon>SchiebePuzzleOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SpieleHub.xaml.cs">
+      <DependentUpon>SpieleHub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Spielende.xaml.cs">
+      <DependentUpon>Spielende.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SpielSeite.xaml.cs">
+      <DependentUpon>SpielSeite.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +175,60 @@
     <None Include="Gehirn_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\AssetBilder\100E.png" />
+    <Content Include="Pages\AssetBilder\10c.png" />
+    <Content Include="Pages\AssetBilder\10E.png" />
+    <Content Include="Pages\AssetBilder\1c.png" />
+    <Content Include="Pages\AssetBilder\1e.png" />
+    <Content Include="Pages\AssetBilder\20c.png" />
+    <Content Include="Pages\AssetBilder\20E.png" />
+    <Content Include="Pages\AssetBilder\2c.png" />
+    <Content Include="Pages\AssetBilder\2e.png" />
+    <Content Include="Pages\AssetBilder\50c.png" />
+    <Content Include="Pages\AssetBilder\50E.png" />
+    <Content Include="Pages\AssetBilder\5c.png" />
+    <Content Include="Pages\AssetBilder\5E.png" />
+    <Content Include="Pages\AssetBilder\accept-circular-button-outline-green.png" />
+    <Content Include="Pages\AssetBilder\accept-circular-button-outline-white.png" />
+    <Content Include="Pages\AssetBilder\accept-circular-button-outline.png" />
+    <Content Include="Pages\AssetBilder\add-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\add-white.png" />
+    <Content Include="Pages\AssetBilder\add.png" />
+    <Content Include="Pages\AssetBilder\BuchstabenSalatBackground.jpg" />
+    <Content Include="Pages\AssetBilder\cancel-button-red.png" />
+    <Content Include="Pages\AssetBilder\cancel-button-white.png" />
+    <Content Include="Pages\AssetBilder\cancel-button.png" />
+    <Content Include="Pages\AssetBilder\creative-commons-logo-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\creative-commons-logo-white.png" />
+    <Content Include="Pages\AssetBilder\Credits.txt" />
+    <Content Include="Pages\AssetBilder\FarbeGWortBackground.png" />
+    <Content Include="Pages\AssetBilder\information-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\information-white.png" />
+    <Content Include="Pages\AssetBilder\information.png" />
+    <Content Include="Pages\AssetBilder\KopfrechnenBackground.jpg" />
+    <Content Include="Pages\AssetBilder\left-arrow-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\left-arrow-white.png" />
+    <Content Include="Pages\AssetBilder\logout-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\logout-white.png" />
+    <Content Include="Pages\AssetBilder\menu-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\menu-white.png" />
+    <Content Include="Pages\AssetBilder\menu.png" />
+    <Content Include="Pages\AssetBilder\minus-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\minus-white.png" />
+    <Content Include="Pages\AssetBilder\minus.png" />
+    <Content Include="Pages\AssetBilder\move-to-next-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\move-to-next-white.png" />
+    <Content Include="Pages\AssetBilder\move-to-next.png" />
+    <Content Include="Pages\AssetBilder\redo-arrow-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\redo-arrow-white.png" />
+    <Content Include="Pages\AssetBilder\SchiebepuzzleBackground.png" />
+    <Content Include="Pages\AssetBilder\Tiledbackground1.png" />
+    <Content Include="Pages\AssetBilder\Tiledbackground1Small.png" />
+    <Content Include="Pages\AssetBilder\volume-Off-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\volume-Off-white.png" />
+    <Content Include="Pages\AssetBilder\volume-On-mainBlue.png" />
+    <Content Include="Pages\AssetBilder\volume-On-white.png" />
+    <Content Include="Pages\AssetBilder\WechselgeldBackground.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -139,6 +237,29 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Puzzlebilder\Leer.txt" />
+    <Content Include="Sounds\Credits.txt" />
+    <Content Include="Sounds\FreeSounds\Ambient1.wav" />
+    <Content Include="Sounds\FreeSounds\Ambient2.wav" />
+    <Content Include="Sounds\FreeSounds\Ambient3.wav" />
+    <Content Include="Sounds\FreeSounds\button-1.wav" />
+    <Content Include="Sounds\FreeSounds\button-2.wav" />
+    <Content Include="Sounds\FreeSounds\CashRegister.wav" />
+    <Content Include="Sounds\FreeSounds\Coin.wav" />
+    <Content Include="Sounds\FreeSounds\GameEnd.wav" />
+    <Content Include="Sounds\FreeSounds\GameStart.wav" />
+    <Content Include="Sounds\FreeSounds\ListSelect-1.wav" />
+    <Content Include="Sounds\FreeSounds\Money.wav" />
+    <Content Include="Sounds\FreeSounds\PuttingDown.wav" />
+    <Content Include="Sounds\FreeSounds\PuzzleTileBlock.wav" />
+    <Content Include="Sounds\FreeSounds\PuzzleTilePush.wav" />
+    <Content Include="Sounds\FreeSounds\record.wav" />
+    <Content Include="Sounds\FreeSounds\recordBig.wav" />
+    <Content Include="Sounds\FreeSounds\Right.wav" />
+    <Content Include="Sounds\FreeSounds\Woosh.wav" />
+    <Content Include="Sounds\FreeSounds\WooshSmall.wav" />
+    <Content Include="Sounds\FreeSounds\Wrong1.wav" />
+    <Content Include="Sounds\FreeSounds\Wrong2.wav" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -149,11 +270,94 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\AnmeldeSeite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Controller\BuchstabenController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Controller\ConcentrateController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Controller\FarbeGleichWortController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Controller\KopfrechnenController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Controller\MemorizeController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Controller\SchiebepuzzleController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Controller\WechselGeldController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Controller\WechselGeldEingabe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Credits.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ResourceDictionaries\ColorBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ResourceDictionaries\IconButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ResourceDictionaries\MainButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ResourceDictionaries\PasswortBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ResourceDictionaries\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ResourceDictionaries\ToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\SchiebePuzzleOptions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\SpieleHub.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Spielende.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\SpielSeite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.7</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sounds\FreeMusicArchive\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

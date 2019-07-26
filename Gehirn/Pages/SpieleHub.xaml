@@ -1,0 +1,244 @@
+﻿<Page
+    x:Class="GehirnJogging.Pages.SpieleHub"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GehirnJogging"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="AssetBilder/Tiledbackground1.png" Stretch="UniformToFill" />
+        </Grid.Background>
+
+        <Border CornerRadius="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50,50,50,50" Canvas.ZIndex="100">
+            <Button Style="{StaticResource IconButtonStyle}"  Click="Click" PointerEntered="ButtonEntered" PointerExited="ButtonExit" x:Name="Logout" Background="Transparent" BorderThickness="0" Tag="logout">
+                <Button.Content>
+                    <Image Source="AssetBilder/logout-mainBlue.png" Stretch="Uniform"  />
+                </Button.Content>
+            </Button>
+        </Border>
+
+        <Border CornerRadius="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,40,50,50" Canvas.ZIndex="100">
+            <Button Style="{StaticResource IconButtonStyle}" Click="Click" PointerEntered="ButtonEntered" PointerExited="ButtonExit" x:Name="volumeOff" Background="Transparent" BorderThickness="0" Tag="volume-Off">
+                <Button.Content>
+                    <Image Source="AssetBilder/volume-Off-mainBlue.png" Stretch="Uniform" />
+                </Button.Content>
+            </Button>
+        </Border>
+        <Border CornerRadius="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,40,50,50"  Canvas.ZIndex="100">
+            <Button Style="{StaticResource IconButtonStyle}" Click="Click" PointerEntered="ButtonEntered" PointerExited="ButtonExit" x:Name="volumeOn" Background="Transparent" BorderThickness="0" Tag="volume-On" Visibility="Collapsed">
+                <Button.Content>
+                    <Image Source="AssetBilder/volume-On-mainBlue.png" Stretch="Uniform" />
+                </Button.Content>
+            </Button>
+        </Border>
+
+
+        <Pivot PivotItemLoaded="PivotItemLoaded" Margin="20,30,20,20">
+
+            <PivotItem  Margin="25,25,25,25">
+                <PivotItem.Header>
+                        <TextBlock FontSize="40" VerticalAlignment="Center" Foreground="DarkGray" Text="Schiebepuzzle" Margin="30,0,15,0"/>
+                    </PivotItem.Header>
+
+                <PivotItem.Background>
+                    <ImageBrush ImageSource="AssetBilder/SchiebepuzzleBackground.png" Stretch="UniformToFill" Opacity=".8"/>
+                </PivotItem.Background>
+
+                <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{StaticResource MainLightBackground}">
+                    <StackPanel Orientation="Vertical" Padding="20,20,20,20" MaxWidth="1000">
+                        <Pivot PivotItemLoaded="PivotItemLoadedSmall" HorizontalAlignment="Center" HorizontalContentAlignment="Center" >
+
+                            <PivotItem Padding="0,25,0,0" HorizontalAlignment="Center" >
+                                    <PivotItem.Header>
+                                        <TextBlock FontSize="40"  VerticalAlignment="Bottom" Foreground="{StaticResource LightColor1}" Text="Leicht" Margin="50,0,150,5"/>
+                                    </PivotItem.Header>
+
+                                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                        <StackPanel HorizontalAlignment="Left" x:Name="SchiebePuzzle0Left"      Margin="50,0,100,0"/>
+                                        <StackPanel HorizontalAlignment="Right" x:Name="SchiebePuzzle0Right"    Margin="100,0,50,0"/>
+                                    </StackPanel>
+                                </PivotItem>
+
+                            <PivotItem Padding="0,25,0,0" HorizontalAlignment="Center" >
+                                    <PivotItem.Header>
+                                        <TextBlock FontSize="40"  VerticalAlignment="Bottom" Foreground="{StaticResource LightColor1}" Text="Normal" Margin="50,0,150,5"/>
+                                    </PivotItem.Header>
+
+                                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                        <StackPanel HorizontalAlignment="Left" x:Name="SchiebePuzzle1Left"      Margin="50,0,100,0"/>
+                                        <StackPanel HorizontalAlignment="Right" x:Name="SchiebePuzzle1Right"    Margin="100,0,50,0"/>
+                                    </StackPanel>
+                                </PivotItem>
+
+                            <PivotItem  Padding="0,25,0,0" HorizontalAlignment="Center" >
+                                    <PivotItem.Header>
+                                        <TextBlock FontSize="40"  VerticalAlignment="Bottom" Foreground="{StaticResource LightColor1}" Text="Schwer" Margin="50,0,150,5"/>
+                                    </PivotItem.Header>
+
+                                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                        <StackPanel HorizontalAlignment="Left" x:Name="SchiebePuzzle2Left"      Margin="50,0,100,0"/>
+                                        <StackPanel HorizontalAlignment="Right" x:Name="SchiebePuzzle2Right"    Margin="100,0,50,0"/>
+                                    </StackPanel>
+                                </PivotItem>
+
+                            </Pivot>
+
+                        <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                            <Button Style="{StaticResource MainButtonStyle}" FontSize="40" Click="StarteSpiel" x:Name="SpuzzleBtn" Content="Starte Spiel" />
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </PivotItem>
+
+
+
+
+            <PivotItem Margin="25,25,25,25">
+                <PivotItem.Header>
+                    <TextBlock FontSize="40" VerticalAlignment="Center" Foreground="DarkGray" Text="Farbe = Wort" Margin="15,0,15,0"/>
+                </PivotItem.Header>
+
+                <PivotItem.Background>
+                    <ImageBrush ImageSource="AssetBilder/FarbeGWortBackground.png" Stretch="UniformToFill" Opacity=".8"/>
+                </PivotItem.Background>
+
+                    <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{StaticResource MainLightBackground}">
+                        <StackPanel Orientation="Vertical" Padding="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" >
+                                <StackPanel HorizontalAlignment="Left" x:Name="WortGzahlLeft" Margin="50,0,100,0"/>
+                                <StackPanel HorizontalAlignment="Right" x:Name="WortGzahlRight" Margin="100,0,50,0"/>
+                            </StackPanel>
+                            <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                                <Button Style="{StaticResource MainButtonStyle}" FontSize="40" Click="StarteSpiel" x:Name="WortGZahlBTN" Content="Starte Spiel" />
+                            </Border>
+                        </StackPanel>
+                    </Border>
+            </PivotItem>
+
+
+
+            <PivotItem Margin="25,25,25,25">
+                <PivotItem.Header>
+                    <TextBlock FontSize="40" VerticalAlignment="Center" Foreground="DarkGray" Text="Kopfrechnen" Margin="15,0,15,0"/>
+                </PivotItem.Header>
+
+                <PivotItem.Background>
+                    <ImageBrush ImageSource="AssetBilder/KopfrechnenBackground.jpg" Stretch="UniformToFill" Opacity=".7"/>
+                </PivotItem.Background>
+
+                <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{StaticResource MainLightBackground}">
+                    <StackPanel Orientation="Vertical" Padding="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" >
+                            <StackPanel HorizontalAlignment="Left" x:Name="KopfrechnenLeft" Margin="50,0,100,0"/>
+                            <StackPanel HorizontalAlignment="Right" x:Name="KopfrechnenRight" Margin="100,0,50,0"/>
+                        </StackPanel>
+                        <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                            <Button Style="{StaticResource MainButtonStyle}" FontSize="40" Click="StarteSpiel" x:Name="KopfrechnenBTN" Content="Starte Spiel" />
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </PivotItem>
+
+
+
+            <PivotItem Margin="25,25,25,25">
+                <PivotItem.Header>
+                    <TextBlock FontSize="40" VerticalAlignment="Center" Foreground="DarkGray" Text="Wechselgeld" Margin="15,0,15,0"/>
+                </PivotItem.Header>
+
+                <PivotItem.Background>
+                    <ImageBrush ImageSource="AssetBilder/WechselgeldBackground.png" Stretch="UniformToFill" Opacity="1"/>
+                </PivotItem.Background>
+
+
+                <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{StaticResource MainLightBackground}">
+                    <StackPanel Orientation="Vertical" Padding="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" >
+                            <StackPanel HorizontalAlignment="Left" x:Name="WechselGeldLeft" Margin="50,0,100,0"/>
+                            <StackPanel HorizontalAlignment="Right" x:Name="WechselGeldRight" Margin="100,0,50,0"/>
+                        </StackPanel>
+                        <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                            <Button Style="{StaticResource MainButtonStyle}" FontSize="40" Click="StarteSpiel" x:Name="WechselGeldBTN" Content="Starte Spiel" />
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </PivotItem>
+
+
+
+            <PivotItem Margin="25,25,25,25">
+                <PivotItem.Header>
+                    <TextBlock FontSize="40" VerticalAlignment="Center" Foreground="DarkGray" Text="Buchstabensalat" Margin="15,0,15,0"/>
+                </PivotItem.Header>
+
+                <PivotItem.Background>
+                    <ImageBrush ImageSource="AssetBilder/BuchstabenSalatBackground.jpg" Stretch="UniformToFill" Opacity=".8"/>
+                </PivotItem.Background>
+
+                <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{StaticResource MainLightBackground}">
+                    <StackPanel Orientation="Vertical" Padding="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" >
+                            <StackPanel HorizontalAlignment="Left" x:Name="BuchstabenSalatLeft" Margin="50,0,100,0"/>
+                            <StackPanel HorizontalAlignment="Right" x:Name="BuchstabenSalatRight" Margin="100,0,50,0"/>
+                        </StackPanel>
+                        <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                            <Button Style="{StaticResource MainButtonStyle}" FontSize="40" Click="StarteSpiel" x:Name="BuchstabenSalatBTN" Content="Starte Spiel" />
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </PivotItem>
+
+
+
+            <PivotItem Margin="25,25,25,25">
+                <PivotItem.Header>
+                    <TextBlock FontSize="40" VerticalAlignment="Center" Foreground="DarkGray" Text="Memorize" Margin="15,0,15,0"/>
+                </PivotItem.Header>
+
+                <PivotItem.Background>
+                    <ImageBrush ImageSource="AssetBilder/TiledBackground2.png" Stretch="UniformToFill" Opacity=".8"/>
+                </PivotItem.Background>
+
+                <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{StaticResource MainLightBackground}">
+                    <StackPanel Orientation="Vertical" Padding="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" >
+                            <StackPanel HorizontalAlignment="Left" x:Name="MemorizeLeft" Margin="50,0,100,0"/>
+                            <StackPanel HorizontalAlignment="Right" x:Name="MemorizeRight" Margin="100,0,50,0"/>
+                        </StackPanel>
+                        <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                            <Button Style="{StaticResource MainButtonStyle}" FontSize="40" Click="StarteSpiel" x:Name="MemorizeBTN" Content="Starte Spiel" />
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </PivotItem>
+
+
+
+            <PivotItem Margin="25,25,25,25">
+                <PivotItem.Header>
+                    <TextBlock FontSize="40" VerticalAlignment="Center" Foreground="DarkGray" Text="Concentrate" Margin="15,0,15,0"/>
+                </PivotItem.Header>
+
+                <PivotItem.Background>
+                    <ImageBrush ImageSource="AssetBilder/TiledBackground2.png" Stretch="UniformToFill" Opacity=".8"/>
+                </PivotItem.Background>
+
+                <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{StaticResource MainLightBackground}">
+                    <StackPanel Orientation="Vertical" Padding="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" >
+                            <StackPanel HorizontalAlignment="Left" x:Name="ConcentrateLeft" Margin="50,0,100,0"/>
+                            <StackPanel HorizontalAlignment="Right" x:Name="ConcentrateRight" Margin="100,0,50,0"/>
+                        </StackPanel>
+                        <Border CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                            <Button Style="{StaticResource MainButtonStyle}" FontSize="40" Click="StarteSpiel" x:Name="ConcentrateBTN" Content="Starte Spiel" />
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

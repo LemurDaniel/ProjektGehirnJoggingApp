@@ -1,0 +1,77 @@
+﻿<ResourceDictionary
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:GehirnJogging.Pages.ResourceDictionaries">
+
+
+    <ImageBrush x:Key="PopupBackground"  ImageSource="../AssetBilder/Tiledbackground1Small.png" Stretch="UniformToFill" />
+    <SolidColorBrush x:Key="PopupText" Color="#BF023C6A"/>
+    <SolidColorBrush x:Key="PopupBorderColor" Color="#BF023C6A"/>
+    <Thickness x:Key="PopupBoderThickness">2,2,2,2</Thickness>
+    
+    <SolidColorBrush x:Key="MainLightBackground" Color="#99f0f8ff"/>
+    <SolidColorBrush x:Key="MainLightBackground2" Color="#55f0f8ff"/>
+    <SolidColorBrush x:Key="MainLightBackground3" Color="#88f0f8ff"/>
+    <SolidColorBrush x:Key="AppBarTrans" Color="#2F0078D7"/>
+
+    <SolidColorBrush x:Key="LightColor1" Color="#FFDDF1F1"/>
+    <SolidColorBrush x:Key="SecondaryTextColor" Color="#FF62798B"/>
+
+    <SolidColorBrush x:Key="MainTextColor" Color="#FF0162AE"/>
+    <SolidColorBrush x:Key="MainInputTextColor" Color="#FF06528D"/>
+    <SolidColorBrush x:Key="MainInputTextColorActive" Color="#FF007DDE"/>
+    <SolidColorBrush x:Key="MainInputTextColorDisable" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="MainInputDisable" Color="#BF023C6A"/>
+    
+    <SolidColorBrush x:Key="MainButtonBlue" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="MainWhite" Color="White"/>
+    <SolidColorBrush x:Key="MainBlueTransparent1" Color="#BF0078D7"/>
+    <SolidColorBrush x:Key="MainBlueTransparent2" Color="#BF023C6A"/>
+    <SolidColorBrush x:Key="MainBlueTransparent3" Color="#0F0078D7" />
+    <SolidColorBrush x:Key="FullyTransparent" Color="#00000000" />
+
+
+    <x:Double x:Key="NormalFont" >30</x:Double>
+    <x:Double x:Key="BigFont" >40</x:Double>
+    <Thickness x:Key="SmallBorderThickness">2,2,2,2</Thickness>
+    <Thickness x:Key="MainBorderThickness">4,4,4,4</Thickness>
+    <Thickness x:Key="MainBorderThickness2">6,6,6,6</Thickness>
+
+
+
+    <SolidColorBrush x:Key="MainButtonRed" Color="#FFD7003B"/>
+    <SolidColorBrush x:Key="MainRedTransparent1" Color="#BFD7003B"/>
+    <SolidColorBrush x:Key="MainRedTransparent2" Color="#BFD7003B"/>
+    <SolidColorBrush x:Key="MainRedDisable" Color="#BFD7003B"/>
+
+    <SolidColorBrush x:Key="MainButtonGreen" Color="#FF8CFF00"/>
+    <SolidColorBrush x:Key="MainGreenTransparent1" Color="#BF8CFF00"/>
+    <SolidColorBrush x:Key="MainGreenTransparent2" Color="#BF8CFF00"/>
+    <SolidColorBrush x:Key="MainGreenDisable" Color="#BF8CFF00"/>
+
+    <SolidColorBrush x:Key="MainButtonLila" Color="#FFA146FF"/>
+    <SolidColorBrush x:Key="MainLilaTransparent1" Color="#BFA146FF"/>
+    <SolidColorBrush x:Key="MainLilaTransparent2" Color="#BFA146FF"/>
+    <SolidColorBrush x:Key="MainLilaDisable" Color="#BFA146FF"/>
+
+    <SolidColorBrush x:Key="MainButtonBlau" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="MainBlauTransparent1" Color="#BF0078D7"/>
+    <SolidColorBrush x:Key="MainBlauTransparent2" Color="#BF0078D7"/>
+    <SolidColorBrush x:Key="MainBlauDisable" Color="#BF0078D7"/>
+
+    <SolidColorBrush x:Key="MainButtonCyan" Color="#FF00FFFF"/>
+    <SolidColorBrush x:Key="MainCyanTransparent1" Color="#BF00FFFF"/>
+    <SolidColorBrush x:Key="MainCyanTransparent2" Color="#BF00FFFF"/>
+    <SolidColorBrush x:Key="MainCyanDisable" Color="#BF00FFFF"/>
+
+    <SolidColorBrush x:Key="MainButtonMagenta" Color="#FFFF00FF"/>
+    <SolidColorBrush x:Key="MainMagentaTransparent1" Color="#BFFF00FF"/>
+    <SolidColorBrush x:Key="MainMagentaTransparent2" Color="#BFFF00FF"/>
+    <SolidColorBrush x:Key="MainMagentaDisable" Color="#BFFF00FF"/>
+
+    <SolidColorBrush x:Key="MainButtonOrange" Color="#FFFFA000"/>
+    <SolidColorBrush x:Key="MainOrangeTransparent1" Color="#BFFFA000"/>
+    <SolidColorBrush x:Key="MainOrangeTransparent2" Color="#BFFFA000"/>
+    <SolidColorBrush x:Key="MainOrangeDisable" Color="#BFFFA000"/>
+
+</ResourceDictionary>
