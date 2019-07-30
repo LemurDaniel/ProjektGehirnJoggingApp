@@ -30,7 +30,7 @@ namespace GehirnJogging.Pages.Controller
         public SpielLogik SpielLogik() => spiellogik;
         public int DurchgaengeMin() => 15;
         public int TimePenalty() => 300_000;
-        public bool Undoable() => false;
+        public bool Undoable() => true;
         public void Undo()
         {
             if (aufgabe.Undo()) foreach (WechselGeldEingabe we in eingaben) we.Aktualisiere();

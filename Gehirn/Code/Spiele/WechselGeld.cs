@@ -61,13 +61,9 @@ namespace GehirnJogging.Code.Spiele
         private Stack<Move> moves = new Stack<Move>();
         public bool Undo()
         {
-            if (Finished) return false;
-            if (moves.Count != 0)
-            {
-                AddSubCoin(moves.Peek().coin, moves.Pop().add, false);
-                return true;
-            }
-            return false;
+            if (Finished || moves.Count == 0) return false;
+            AddSubCoin(moves.Peek().coin, !moves.Pop().add, false);
+            return true;
         }
 
 
@@ -92,7 +88,8 @@ namespace GehirnJogging.Code.Spiele
             if (coin <= Coins.EUR_2) Sounddesign.PlaySoundAsync(Sounddesign.COIN);
             else Sounddesign.PlaySoundAsync(Sounddesign.MONEY);
             // Sinnlose Moves nicht speichern
-            if (moves.Count != 0 && SaveMove && moves.Peek().coin == coin && moves.Peek().add != add) return;
+            if (!SaveMove) return;
+            //if (moves.Count != 0 && moves.Peek().coin == coin && moves.Peek().add != add) moves.Pop();
             moves.Push(new Move(coin, add));
         }
 
