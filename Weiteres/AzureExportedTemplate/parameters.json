@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverfarms_WestEuropePlan_name": {
+            "value": null
+        },
+        "servers_projekt_gehirn_jogging_name": {
+            "value": null
+        },
+        "sites_projekt_gehirn_jogging_functions_name": {
+            "value": null
+        },
+        "storageAccounts_projektgehirnjob403_name": {
+            "value": null
+        },
+        "storageAccounts_projektgehirnjogging_name": {
+            "value": null
+        },
+        "components_projekt_gehirn_jogging_functions_name": {
+            "value": null
+        },
+        "alertrules_Failure_Anomalies___projekt_gehirn_jogging_functions_name": {
+            "value": null
+        }
+    }
+}
