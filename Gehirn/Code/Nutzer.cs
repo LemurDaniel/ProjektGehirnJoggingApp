@@ -14,10 +14,24 @@ namespace GehirnJogging.Code
         private static Nutzer instance;
         public static Nutzer Getinstance()
         {
-            if (instance == null) instance = new Nutzer();
+            if (instance == null)
+            {
+                instance = new Nutzer();
+                if (App.OFFLINE_MODE) { }
+            }
+
+            
             return instance;
         }
-        private Nutzer() { }
+        private Nutzer() {
+            if (App.OFFLINE_MODE)
+            {
+                name = "Testnutzer";
+                id = 0;
+                loggendIn = true;
+                stManager = StorageAccountManager.CreateAsync("", "", this).Result;
+            }
+        }
 
 
         private int id;

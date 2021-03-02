@@ -11,7 +11,7 @@
     <AssemblyName>Gehirn</AssemblyName>
     <DefaultLanguage>de-DE</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -183,65 +183,9 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Abgabe\Hinweise.pdf" />
-    <None Include="Abgabe\Landau Daniel 150523 - Gehirnjoggin.pdf" />
-    <None Include="Abgabe\Landau Daniel 150523 - GehirnjoggingApp Versicherungsvermerk.pdf" />
-    <None Include="Abgabe\Landau Daniel 150523 - Lastenheft Gehirnjogging.pdf" />
     <None Include="Gehirn_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Abgabe\SQLQuery Datenbank Gehirnjogging.sql" />
-    <Content Include="Abgabe\Textdateien\Code\Counter.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Nutzer.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Sounddesign.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\BuchstabenSalat.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\ButtonPresser.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\Concentrate.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\FarbeGleichWort.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\KopfRechnen.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\Memorize.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\Schiebepuzzle.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\Spiele.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\WechselGeld.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\Spiele\Worte.txt" />
-    <Content Include="Abgabe\Textdateien\Code\SpielHighscores.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Code\StorageAccountManager.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\AnmeldeSeite.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\AnmeldeSeite.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\BuchstabenController.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\BuchstabenController.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\ConcentrateController.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\ConcentrateController.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\FarbeGleichWortController.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\FarbeGleichWortController.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\KopfrechnenController.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\KopfrechnenController.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\MemorizeController.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\MemorizeController.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\SchiebepuzzleController.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\SchiebepuzzleController.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\SpielController.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\WechselGeldController.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\WechselGeldController.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\WechselGeldEingabe.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Controller\WechselGeldEingabe.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Credits.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Credits.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\ResourceDictionaries\ColorBrushes.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\ResourceDictionaries\ColorButton.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\ResourceDictionaries\IconButton.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\ResourceDictionaries\MainButton.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\ResourceDictionaries\PasswortBox.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\ResourceDictionaries\TextBox.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\ResourceDictionaries\ToggleButton.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\SchiebePuzzleOptions.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\SchiebePuzzleOptions.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\SpieleHub.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\SpieleHub.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Spielende.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\Spielende.xaml.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\SpielSeite.xaml.cs.txt" />
-    <Content Include="Abgabe\Textdateien\Pages\SpielSeite.xaml.txt" />
     <Content Include="Code\Spiele\Worte.txt" />
     <Content Include="Pages\AssetBilder\100E.png" />
     <Content Include="Pages\AssetBilder\10c.png" />

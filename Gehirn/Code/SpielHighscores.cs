@@ -31,24 +31,44 @@ namespace GehirnJogging.Code
             if (instance == null) instance = new SpielHighscores();
             return instance;
         }
-        private SpielHighscores(){}
+        private SpielHighscores(){
+            if (App.OFFLINE_MODE)
+            {
+                spiele.Add(SCHIEBEPUZZLE_LEICHT, new Spiel("SCHIEBEPUZZLE_LEICHT"));
+                spiele.Add(SCHIEBEPUZZLE_NORMAL, new Spiel("SCHIEBEPUZZLE_NORMAL"));
+                spiele.Add(SCHIEBEPUZZLE_SCHWER, new Spiel("SCHIEBEPUZZLE_SCHWER"));
+                spiele.Add(WORT_GLEICH_FARBE, new Spiel("WORT_GLEICH_FARBE"));
+                spiele.Add(KOPFRECHNEN, new Spiel("KOPFRECHNEN"));
+                spiele.Add(WECHSELGELD, new Spiel("WECHSELGELD"));
+                spiele.Add(BUCHSTABENSALAT, new Spiel("BUCHSTABENSALAT"));
+                spiele.Add(MEMORIZE, new Spiel("MEMORIZE"));
+                spiele.Add(CONCENTRATE, new Spiel("CONCENTRATE"));
+                spiele.Add(BUTTONPRESSER, new Spiel("BUTTONPRESSER"));
+            }
+        }
 
         // id => Spiel
         public Dictionary<int, Spiel> spiele = new Dictionary<int, Spiel>(); 
 
         public class Spiel
         {
-            public int id_spiel;
-            public string spiel;
-            public int globaleBestzeit;
-            public int globalerDurschnitt;
-            public string rekordhalter;
+            public Spiel(){ }
+            public Spiel(string name)
+            {
+                spiel = name;
+            }
 
-            public int bestzeit;
-            public int schlechtesteZeit;
-            public int durchschnitt;
-            public int anzahl_gespielt;
-            public Int64 akummulierteSpielzeit;
+            public int id_spiel = 0;
+            public string spiel = "undefined";
+            public int globaleBestzeit = 0;
+            public int globalerDurschnitt = 0;
+            public string rekordhalter = "undefined";
+
+            public int bestzeit = 0;
+            public int schlechtesteZeit = 0;
+            public int durchschnitt = 0;
+            public int anzahl_gespielt = 0;
+            public Int64 akummulierteSpielzeit = 0;
 
 
             public Spiel GetCopy()
@@ -73,6 +93,8 @@ namespace GehirnJogging.Code
 
         public static async Task HoleHighscoresAsync()
         {
+            if (App.OFFLINE_MODE) return;
+
             Request<SpielHighscores> request = new Request<SpielHighscores>();
             await request.HttpRequestAsync(App.FUNCTION_GET_HIGH_SCORES);
             SpielHighscores.GetInstance().spiele = request.obj.spiele;
@@ -81,6 +103,8 @@ namespace GehirnJogging.Code
 
         public static async Task AktualisiereHighscoresAsync(Spiel spiel)
         {
+            if (App.OFFLINE_MODE) return;
+
             Request<Spiel> request = new Request<Spiel>();
             request.obj = spiel;
             await request.HttpRequestAsync(App.FUNCTION_UPDATE_HIGHSCORE);

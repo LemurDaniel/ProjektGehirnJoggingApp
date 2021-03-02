@@ -36,7 +36,10 @@ namespace GehirnJogging.Pages
             Sounddesign.PlaySoundAsync(Sounddesign.WOOSH);
             volumeOn.Visibility = Sounddesign.CURRENT_AMBIENT == null ? Visibility.Collapsed : Visibility.Visible;
             volumeOff.Visibility = Sounddesign.CURRENT_AMBIENT == null ? Visibility.Visible : Visibility.Collapsed;
-            if(!BuchstabenAufgabe.read) BuchstabenAufgabe.ReadFile().GetAwaiter();           
+            if(!BuchstabenAufgabe.read) BuchstabenAufgabe.ReadFile().GetAwaiter();
+
+            if (App.OFFLINE_MODE)
+                ToggleAuswahl.IsEnabled = false;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e) => FehlerAusgabe.Text = e.Parameter as String ?? "";
@@ -57,6 +60,7 @@ namespace GehirnJogging.Pages
                 return;
             }
 
+            if (App.OFFLINE_MODE) return;
             Sounddesign.PlaySoundAsync(Sounddesign.BUTTON_PUSH2);
             IsLogin = !IsLogin;
             ToggleAuswahl.IsChecked = true;
@@ -68,6 +72,15 @@ namespace GehirnJogging.Pages
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             Sounddesign.PlaySoundAsync(Sounddesign.BUTTON_PUSH1);
+
+            if (App.OFFLINE_MODE)
+            {
+                Nutzer.Getinstance();
+                this.Frame.Navigate(typeof(SpieleHub));
+                return;
+            }
+
+
             // Prüfe Eingaben
             if (nickname.Text.Length < 3)
             {

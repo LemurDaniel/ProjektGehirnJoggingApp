@@ -1,0 +1,12 @@
+﻿left-arrow-mainBlue.png, left-arrow-white.png, Roundicons, https://www.flaticon.com/authors/roundicons, Flaticon, https://www.flaticon.com/free-icon/left-arrow_271218#term=arrow&page=1&position=11
+move-to-next-mainBlue.png, move-to-next-white.png, freepik, https://www.flaticon.com/authors/freepik, Flaticon, https://www.flaticon.com/free-icon/move-to-next_64491
+menu-mainBlue.png, menu-white.png, Eleonor Wang, https://www.flaticon.com/authors/eleonor-wang, Flaticon, https://www.flaticon.com/free-icon/menu_128453
+redo-arrow-mainBlue.png, redo-arrow-white.png, Yannick, https://www.flaticon.com/authors/yannick, Flaticon, https://www.flaticon.com/free-icon/turn-right-arrow_12268#term=Redo&page=1&position=20
+creative-commons-logo-mainBlue.png, creative-commons-logo-white.png, Daniel Bruce, https://www.flaticon.com/authors/daniel-bruce, Flaticon, https://www.flaticon.com/free-icon/creative-commons-logo_3501
+volume-Off-mainBlue.png, volume-Off-white.png, Google, https://www.flaticon.com/authors/google, Flaticon, https://www.flaticon.com/free-icon/volume-off-indicator_60750#term=volume%20off&page=1&position=5
+volume-On-MainBlue.png, volume-On-white.png, Google, https://www.flaticon.com/authors/google, Flaction, https://www.flaticon.com/free-icon/volume-up-indicator_61051#term=volume&page=1&position=65
+information-MainBlue.png, information-white.png, Freepik, https://www.flaticon.com/authors/freepik, Flaticon, https://www.flaticon.com/free-icon/information_906794
+cancel-button-red.png, cancel-button-white.png, Nas Ztudio, https://www.flaticon.com/authors/nas-ztudio, Flaticon, https://www.flaticon.com/free-icon/cancel-button_108333#term=cancel%20circular%20button&page=1&position=6
+accept-circular-button-outline-green.png, accept-circular-button-outline-white.png, Freepik, https://www.flaticon.com/authors/freepik, Flaticon, https://www.flaticon.com/free-icon/accept-circular-button-outline_58679
+minus-mainBlue.png, minus-white.png, Smashicons, https://www.flaticon.com/authors/smashicons, Flaticon, https://www.flaticon.com/free-icon/minus_149706
+add-mainBlue.png, add-white.png, Smashicons, https://www.flaticon.com/authors/smashicons, Flaticon, https://www.flaticon.com/free-icon/add_149705

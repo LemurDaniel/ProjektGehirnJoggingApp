@@ -35,11 +35,21 @@ namespace GehirnJogging.Code
         public Action DownloadEndedAction { get => downloadEndedAction; set => downloadEndedAction = value; }
 
         private StorageAccountManager() { }
+
+        public static StorageAccountManager FixForOfflineMode()
+        {
+            StorageAccountManager st = new StorageAccountManager();
+            try { st.puzzleFolder = Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Puzzlebilder").GetResults(); }
+            catch { st.puzzleFolder = Windows.ApplicationModel.Package.Current.InstalledLocation.CreateFolderAsync("Puzzlebilder").GetResults(); }
+            return st;
+        }
         public static async Task<StorageAccountManager> CreateAsync(string blob, string connectionString, Nutzer nutzer)
         {
             StorageAccountManager st = new StorageAccountManager();
             try { st.puzzleFolder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Puzzlebilder"); }
             catch { st.puzzleFolder = await Windows.ApplicationModel.Package.Current.InstalledLocation.CreateFolderAsync("Puzzlebilder"); }
+
+            if (App.OFFLINE_MODE) return st;
 
             CloudStorageAccount.TryParse(connectionString, out st.cStorageAccount);
             st.cbClient = st.cStorageAccount.CreateCloudBlobClient();

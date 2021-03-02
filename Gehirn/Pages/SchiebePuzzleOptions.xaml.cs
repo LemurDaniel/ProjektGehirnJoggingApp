@@ -31,8 +31,9 @@ namespace GehirnJogging.Pages
         private SchiebepuzzleController puzzle;
 
         public SchiebePuzzleOptions()
-        {
+        {      
             this.InitializeComponent();
+            if (App.OFFLINE_MODE) Standard.Visibility = Visibility.Collapsed;
             App.currentPage = this;
             Sounddesign.PlaySoundAsync(Sounddesign.WOOSH);
             tb1.IsChecked = true;
@@ -206,6 +207,7 @@ namespace GehirnJogging.Pages
         /* Bei Seitenwechsel den Blobstorage aktualisieren */
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
+            if (App.OFFLINE_MODE) return;
             StorageAccountManager st = Nutzer.Getinstance().StManager;
             st.UploadFileAsync(Add);
             st.DeleteFileAsync(Delete);
