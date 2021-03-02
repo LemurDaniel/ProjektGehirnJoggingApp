@@ -21,7 +21,7 @@ namespace Gehirn
 {
     sealed partial class App : Application
     {
-        public static readonly bool OFFLINE_MODE = false;
+        public static readonly bool OFFLINE_MODE = true;
         public static readonly string FUNCTION_KEY = "?code=IgVPa81pVjQSLlztCejHkoHjgtVCE2MtFEGkuHhkgYTqcPTLdvOq6A==";
         //public static readonly string FUNCTION_KEY = "";
         //public static readonly string FUNCTION_URI = "http://localhost:7071/api/";

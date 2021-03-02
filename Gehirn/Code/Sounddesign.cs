@@ -74,8 +74,8 @@ namespace GehirnJogging.Code
         {
             if (overrideNextN > 0)
             {
-                sound = overrideNext;
-                overrideNext = --overrideNextN == 0 ? null:overrideNext;
+                //sound = overrideNext;
+                //overrideNext = --overrideNextN == 0 ? null:overrideNext;
             }
             try
             {
