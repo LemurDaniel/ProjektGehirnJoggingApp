@@ -251,6 +251,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Puzzlebilder\Leer.txt" />
     <Content Include="Sounds\Credits.txt" />
+    <Content Include="Sounds\FreeMusicArchive\Lobo_Loco-Elysium.mp3" />
     <Content Include="Sounds\FreeSounds\Ambient1.wav" />
     <Content Include="Sounds\FreeSounds\Ambient2.wav" />
     <Content Include="Sounds\FreeSounds\Ambient3.wav" />
@@ -370,9 +371,7 @@
       <Version>12.0.2</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sounds\FreeMusicArchive\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

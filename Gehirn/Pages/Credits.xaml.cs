@@ -153,6 +153,7 @@ namespace GehirnJogging.Pages
 
             foreach (String line in list)
             {
+                if (line.Contains("AMBIENT4")) continue;
                 String[] arr = line.Split(',');
                 for (int i = 0; i < arr.Length; i++) arr[i] = arr[i].Trim();
                 StackPanel st = new StackPanel();
@@ -165,6 +166,7 @@ namespace GehirnJogging.Pages
                 iconBtn.Style = (Style)new ResourceDictionary { Source = new Uri("ms-appx:///Pages/ResourceDictionaries/MainButton.xaml") }["MainButtonStyle"];
                 iconBtn.Click += async (sender, e) =>
                 {
+                    Console.WriteLine(folder.Path + "\\" + arr[1]);
                     StorageFile sound = await StorageFile.GetFileFromPathAsync(folder.Path+"\\"+arr[1]);
                     media.SetSource(await sound.OpenAsync(FileAccessMode.Read), "");
                     media.Play();

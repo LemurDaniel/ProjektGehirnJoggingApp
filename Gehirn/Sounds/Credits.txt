@@ -18,4 +18,5 @@ CASH_REGISTER, FreeSounds\CashRegister.wav, Zot820, https://freesound.org/people
 PUTTING_DOWN, FreeSounds\PuttingDown.wav, mrh4hn, https://freesound.org/people/mrh4hn/sounds/426631/
 AMBIENT1, FreeSounds\Ambient1.wav, Setuniman, https://freesound.org/people/Setuniman/sounds/264937/
 AMBIENT2, FreeSounds\Ambient2.wav, frankum, https://freesound.org/people/frankum/sounds/393520/
-AMBIENT3, FreeSounds\Ambient3.wav, Lobo Loco, http://freemusicarchive.org/music/Lobo_Loco/Tree_of_Meditation/Elysium_ID_881
+AMBIENT3, FreeMusicArchive\Lobo_Loco-Elysium.mp3, Lobo Loco, http://freemusicarchive.org/music/Lobo_Loco/Tree_of_Meditation/Elysium_ID_881
+AMBIENT4, FreeSounds\Ambient3.wav, Unknown,  https://freesound.org
