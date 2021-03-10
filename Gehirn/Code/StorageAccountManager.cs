@@ -36,13 +36,6 @@ namespace GehirnJogging.Code
 
         private StorageAccountManager() { }
 
-        public static StorageAccountManager FixForOfflineMode()
-        {
-            StorageAccountManager st = new StorageAccountManager();
-            try { st.puzzleFolder = Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Puzzlebilder").GetResults(); }
-            catch { st.puzzleFolder = Windows.ApplicationModel.Package.Current.InstalledLocation.CreateFolderAsync("Puzzlebilder").GetResults(); }
-            return st;
-        }
         public static async Task<StorageAccountManager> CreateAsync(string blob, string connectionString, Nutzer nutzer)
         {
             StorageAccountManager st = new StorageAccountManager();

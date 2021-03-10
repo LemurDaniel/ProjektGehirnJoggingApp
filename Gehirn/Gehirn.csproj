@@ -249,7 +249,9 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="Puzzlebilder\Leer.txt" />
+    <Content Include="Puzzlebilder\Mensch ärgere dich nicht.jpg" />
+    <Content Include="Puzzlebilder\Schach14.jpg" />
+    <Content Include="Puzzlebilder\Schallplattenspieler Final1.jpg" />
     <Content Include="Sounds\Credits.txt" />
     <Content Include="Sounds\FreeMusicArchive\Lobo_Loco-Elysium.mp3" />
     <Content Include="Sounds\FreeSounds\Ambient1.wav" />
