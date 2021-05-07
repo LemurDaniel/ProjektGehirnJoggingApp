@@ -1,0 +1,30 @@
+Haupthintergrund
+    cube-background-2484131_1920.jpg     https://pixabay.com/de/illustrations/w%C3%BCrfel-hintergrund-hintergrund-2484131/   
+    CubeBackground.jpg                   Edit 
+    Tiledbackground1.png                 Edit 
+    Tiledbackground1Small.png            Edit
+
+
+BuchstabenSalat Hintergrund	
+    BuchstabenSalatBackground.jpg   https://pixabay.com/de/photos/holzw%C3%BCrfel-abc-w%C3%BCrfel-buchstaben-473703/
+
+Kopfrechnen Hintergrund		
+    KopfrechnenBackground.jpg       https://pixabay.com/de/illustrations/banner-zahl-ziffer-mathematik-1183445/
+
+Farbe = Wort Hintergrund	
+    FarbeGWortBackground            https://pixabay.com/de/illustrations/rot-gelb-blau-gr%C3%BCn-lila-orange-2330264/
+
+
+Schiebepuzzle Hintergrund	
+    SchiebepuzzleBackground.jpg     Selbsterstellt
+    Test.jpg                        Selbsterstellt
+
+Wechselgeld Hintergrund
+    WechselgeldBackground.jpg       Selbsterstellt
+
+Wechselgeld, Wechselgeldscheine, etc
+    /Geld/*                         Selbsterstellt
+
+
+seamless-colorful-mathematical-symbol-pattern-white-background_3119-1.jpg       https://pixabay.com/
+    TiledBackground2.jpg                                                        Edit
